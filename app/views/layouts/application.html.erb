@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript">
+      function makeAnonymous()
+      {
+          if (!document.getElementById('Anonymous').checked) {
+              document.getElementById('name').style.visibility='visible'
+              document.getElementById('email').style.visibility='visible'
+              document.getElementById('contactno').style.visibility='visible'
+          } else {
+              document.getElementById('name').style.visibility='hidden'
+              document.getElementById('email').style.visibility='hidden'
+              document.getElementById('contactno').style.visibility='hidden'
+          }
+      }
+  </script>
   <title>FeedBackValued</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
