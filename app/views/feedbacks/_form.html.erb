@@ -1,0 +1,40 @@
+<%= form_for(@feedback) do |f| %>
+  <% if @feedback.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
+
+      <ul>
+      <% @feedback.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :feed %><br />
+    <%= f.text_field :feed %>
+  </div>
+    <div class="field">
+      <input type ="checkbox" id ="Anonymous" name="Remain Anonymous" value="fdg" onclick="makeAnonymous()">Remain Anonymous<br>
+    </div>
+  <div class="field" id="name">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field" id="email">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field" id="contactno">
+    <%= f.label :contactno %><br />
+    <%= f.text_field :contactno %>
+  </div>
+  <div class="field">
+    <%= f.label :client_id %><br />
+    <%= f.text_field :client_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+ <% end %>
