@@ -10,13 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field" id=customer_id>
+      <%= f.label :customer %><br />
+      <%= f.collection_select :customer_id, Customer.all, :id, :name,
+                               :prompt => true %>
+  </div>
   <div class="field">
-    <%= f.label :feed %><br />
-    <%= f.text_field :feed %>
+    <%= f.label :feedback %><br />
+    <%= f.text_area :feed %>
   </div>
     <div class="field">
-      <input type ="checkbox" id ="Anonymous" name="Remain Anonymous" value="fdg" onclick="makeAnonymous()">Remain Anonymous<br>
+      <input type ="checkbox" id ="Anonymous" name="Remain Anonymous" onclick="makeAnonymous()">     Remain Anonymous<br/>
     </div>
   <div class="field" id="name">
     <%= f.label :name %><br />
@@ -29,10 +33,6 @@
   <div class="field" id="contactno">
     <%= f.label :contactno %><br />
     <%= f.text_field :contactno %>
-  </div>
-  <div class="field">
-    <%= f.label :client_id %><br />
-    <%= f.text_field :client_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

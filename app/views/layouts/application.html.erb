@@ -5,13 +5,13 @@
       function makeAnonymous()
       {
           if (!document.getElementById('Anonymous').checked) {
-              document.getElementById('name').style.visibility='visible'
-              document.getElementById('email').style.visibility='visible'
-              document.getElementById('contactno').style.visibility='visible'
+              document.getElementById('name').style.visibility = 'visible';
+              document.getElementById('email').style.visibility='visible' ;
+              document.getElementById('contactno').style.visibility='visible';
           } else {
-              document.getElementById('name').style.visibility='hidden'
-              document.getElementById('email').style.visibility='hidden'
-              document.getElementById('contactno').style.visibility='hidden'
+              document.getElementById('name').style.visibility='hidden' ;
+              document.getElementById('email').style.visibility='hidden' ;
+              document.getElementById('contactno').style.visibility='hidden';
           }
       }
   </script>
@@ -25,11 +25,11 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "FeedBackValued", '#', id: "logo" %>
+      <%= link_to "FeedBackValued", 'root_path', id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home",    '#' %></li>
-          <li><%= link_to "Help",    '#' %></li>
+          <li><%= link_to "Home",    'root_path' %></li>
+          <li><%= link_to "Help",    'help_path' %></li>
         </ul>
       </nav>
     </div>
