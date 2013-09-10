@@ -17,10 +17,10 @@
   </div>
   <div class="field">
     <%= f.label :feedback %><br />
-    <%= f.text_area :feed %>
+    <%= f.text_area :name,  :class => "input-xxlarge", :placeholder => 'Give your feedback here.' %>
   </div>
     <div class="field">
-      <input type ="checkbox" id ="Anonymous" name="Remain Anonymous" onclick="makeAnonymous()">     Remain Anonymous<br/>
+      <input type ="checkbox" id ="Anonymous" name="Remain Anonymous" onclick="makeAnonymous()">&nbsp;&nbsp;&nbsp;Remain Anonymous<br/>
     </div>
   <div class="field" id="name">
     <%= f.label :name %><br />
@@ -32,9 +32,13 @@
   </div>
   <div class="field" id="contactno">
     <%= f.label :contactno %><br />
-    <%= f.text_field :contactno %>
+    <%= f.text_field :contactno, :size => 0 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", class:"btn btn-medium" %>
+<!--
+    <a>&nbsp;Or&nbsp;</a>
+    <%= f.submit "Submit and Give more feedback", class:"btn btn-medium" %>
+-->
   </div>
  <% end %>
