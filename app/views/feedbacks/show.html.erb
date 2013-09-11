@@ -22,9 +22,9 @@
 
 <p>
   <b>Customer:</b>
-  <%= @feedback.customer_id %>
+  <%= @feedback.customer.name %>
 </p>
 
-
+<%= link_to 'Give more feedback', giveFeedback_path %> |
 <%= link_to 'Edit', edit_feedback_path(@feedback) %> |
 <%= link_to 'Back', feedbacks_path %>

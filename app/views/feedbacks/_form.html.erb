@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :feedback %><br />
-    <%= f.text_area :name,  :class => "input-xxlarge", :placeholder => 'Give your feedback here.' %>
+    <%= f.text_area :feed, :class => "input-xxlarge", :placeholder => 'Give your feedback here.' %>
   </div>
     <div class="field">
       <input type ="checkbox" id ="Anonymous" name="Remain Anonymous" onclick="makeAnonymous()">&nbsp;&nbsp;&nbsp;Remain Anonymous<br/>
@@ -36,9 +36,5 @@
   </div>
   <div class="actions">
     <%= f.submit "Submit", class:"btn btn-medium" %>
-<!--
-    <a>&nbsp;Or&nbsp;</a>
-    <%= f.submit "Submit and Give more feedback", class:"btn btn-medium" %>
--->
   </div>
  <% end %>

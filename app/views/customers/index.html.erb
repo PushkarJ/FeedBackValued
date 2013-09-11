@@ -11,7 +11,7 @@
 <% @customers.each do |customer| %>
   <tr>
     <td ><%= customer.name %></td>
-    <td><%= link_to 'See feedback', customer %></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'See feedback', customer %></td>
     <td hidden="true"><%= link_to 'Edit', edit_customer_path(customer) %></td>
     <td hidden="true"><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
@@ -20,4 +20,4 @@
 
 <br />
 
-<%= link_to 'New Customer', new_customer_path %>
+<%= link_to 'I want to get feedback too', new_customer_path %>

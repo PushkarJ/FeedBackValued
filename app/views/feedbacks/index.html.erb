@@ -2,24 +2,14 @@
 
 <table>
   <tr>
-    <th>Feed</th>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Contactno</th>
-    <th>Customer</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Feedback</th>
   </tr>
 
 <% @feedbacks.each do |feedback| %>
   <tr>
     <td><%= feedback.feed %></td>
-    <td><%= feedback.name %></td>
-    <td><%= feedback.email %></td>
-    <td><%= feedback.contactno %></td>
-    <td><%= feedback.customer_id %></td>
-    <td><%= link_to 'Show', feedback %></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Details', feedback %></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'View Customer', feedback.customer %></td>
     <td hidden="true"><%= link_to 'Edit', edit_feedback_path(feedback) %></td>
     <td hidden="true"><%= link_to 'Destroy', feedback, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
@@ -28,4 +18,4 @@
 
 <br />
 
-<%= link_to 'New Feedback', new_feedback_path %>
+<%= link_to 'Give Feedback', new_feedback_path %>
