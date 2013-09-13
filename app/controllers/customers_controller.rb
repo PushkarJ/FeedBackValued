@@ -6,6 +6,7 @@ class CustomersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.xml { render xml: @customers }
       format.json { render json: @customers }
     end
   end
@@ -17,6 +18,7 @@ class CustomersController < ApplicationController
     @feedback=@customer.feedback
     respond_to do |format|
       format.html # show.html.erb
+      format.xml { render xml: @customer }
       format.json { render json: @customer }
     end
   end

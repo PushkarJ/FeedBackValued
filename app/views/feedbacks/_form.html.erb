@@ -1,4 +1,4 @@
-<%= form_for(@feedback) do |f| %>
+<%= form_for(@feedback, remote: true) do |f| %>
   <% if @feedback.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
@@ -22,6 +22,7 @@
     <div class="field">
       <input type ="checkbox" id ="Anonymous" name="Remain Anonymous" onclick="makeAnonymous()">&nbsp;&nbsp;&nbsp;Remain Anonymous<br/>
     </div>
+    <br/>
   <div class="field" id="name">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -32,9 +33,11 @@
   </div>
   <div class="field" id="contactno">
     <%= f.label :contactno %><br />
-    <%= f.text_field :contactno, :size => 0 %>
+    <%= f.text_field :contactno %>
   </div>
   <div class="actions">
-    <%= f.submit "Submit", class:"btn btn-medium" %>
+    <%= f.submit "Submit and Give more feedback", class:"btn btn-medium",
+                 data: {confirm: 'Press \'ok\' to submit your feedback.
+                 You can continue giving more feedback or click \'View feedbacks\' to view all feedbacks!'}%>
   </div>
  <% end %>
