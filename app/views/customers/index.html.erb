@@ -1,0 +1,19 @@
+<h1>Listing customers</h1>
+<table style="text-indent: 10em;">
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @customers.each do |customer| %>
+  <tr>
+    <td ><%= customer.name %></td>
+    <td style="text-indent: 4em"><%= link_to 'See feedback', customer %></td>
+    <td hidden="true"><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    <td hidden="true"><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Subscribe to Get Feedback', new_customer_path %>

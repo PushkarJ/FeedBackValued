@@ -1,3 +1,8 @@
+Citations:
+1. http://squarism.com/2011/04/01/how-to-write-a-ruby-rails-3-rest-api/
+2. http://api.rubyonrails.org/
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
