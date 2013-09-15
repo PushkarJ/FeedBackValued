@@ -1,6 +1,6 @@
 FeedBackValued::Application.routes.draw do
-  match '/home', :to => 'static_pages#home'
-  #TODO:Fix this. Make the website to go to homepage ie localhost:3000 should go to homepage
+  match '/home', :to => 'static_pages#home', via: 'get'
+  #Note: 'root' method did not work for me after numerous attempts.
   match '/help',    :to => 'static_pages#help',    via: 'get'
   match'/giveFeedback',   :to => 'feedbacks#new',       via:'get'
   match '/getFeedback' ,   :to => 'customers#new',    via: 'get'
