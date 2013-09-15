@@ -1,0 +1,7 @@
+<li>
+  <span class="content"><%= feedback.feed %></span>
+  <span class="content">&nbsp;&nbsp;&nbsp;&nbsp;- <%=feedback.name %></span>
+  <span class="timestamp">
+    &nbsp;&nbsp;&nbsp;&nbsp;<i>Posted <%= time_ago_in_words(feedback.created_at) %> ago.</i>
+  </span>
+</li>
